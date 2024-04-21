@@ -1,0 +1,199 @@
+body {
+    --background-color: #252526;
+    --text-color: #A1A1AA;
+    --botton-color: #ffffff;
+    --botton-background-color: #2A2B2C;
+    --row-background-color:#52525B;
+    --hover-background-color: #fff700;
+    --background-color-container: #1e1e1e;
+
+}
+
+body.light {
+    --background-color: #f3f3f3;
+    --text-color: #A1A1AA;
+    --botton-color: #ffffff;
+    --botton-background-color: #2A2B2C;
+    --row-background-color:#ffffff;
+    --hover-background-color: #666;
+    --background-color-container: #ffffff;
+}
+
+/* THEME */
+.day-night {
+    cursor: pointer;
+    right: 20px;
+    top: 20px;
+    opacity: 0.3;
+}
+
+.day-night input {
+    display: none;
+}
+
+.day-night input+div {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    box-shadow: inset 8px -8px 0 0 var(--text-color);
+    transform: scale(1) rotate(-2deg);
+    transition: box-shadow 0.5s ease 0s, transform 0.4s ease 0.1s;
+}
+
+.day-night input+div:before {
+    content: "";
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: background-color 0.3s ease;
+}
+
+.day-night input+div:after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin: -3px 0 0 -3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 -23px 0 var(--text-color), 0 23px 0 var(--text-color), 23px 0 0 var(--text-color), -23px 0 0 var(--text-color), 15px 15px 0 var(--text-color), -15px 15px 0 var(--text-color), 15px -15px 0 var(--text-color), -15px -15px 0 var(--text-color);
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+.day-night input:checked+div {
+    box-shadow: inset 20px -20px 0 0 var(--text-color);
+    transform: scale(0.5) rotate(0deg);
+    transition: transform 0.3s ease 0.1s, box-shadow 0.2s ease 0s;
+}
+
+.day-night input:checked+div:before {
+    background: var(--text-color);
+    transition: background-color 0.3s ease 0.1s;
+}
+
+.day-night input:checked+div:after {
+    transform: scale(1);
+    transition: transform 0.5s ease 0.15s;
+}
+
+
+
+
+body {
+    line-height: 1.75;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+    --hover-background-color: #666;
+    width: 100%;
+}
+
+body.light {
+    --hover-background-color: #C0C0C0;
+    ;
+}
+
+
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 20px;
+}
+
+
+/* FOOTER */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    text-align: center;
+}
+
+
+.divContainer{
+    background-color: var(--background-color-container);;
+    border-radius: 20px;
+    height: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    place-content: center;
+}
+
+.firstTab{
+    padding-left: 30px;
+}
+
+.secondTab{
+    padding-left: 60px;
+}
+
+#mainContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 5%;
+}
+
+#mainContainer div:nth-child(6){
+    display: flex;
+}
+
+
+
+@media (width > 1025px) {
+    #mainContainer{
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    #mainContainer div:nth-child(2){
+        grid-row: span 2;
+    }
+
+    #mainContainer div:nth-child(6){
+        grid-column: 1/-1;
+
+
+    }
+}
+
+#buttonCharge {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid var(--hover-background-color);
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 60px;
+  margin: 0;
+  min-height: 60px;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  width: 100%;
+}
+
+#buttonCharge:hover {
+  color: #FFF803 ;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  border: #FFF803 solid 2px;
+  transform: translateY(-2px);
+}
+
+

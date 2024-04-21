@@ -1,1 +1,220 @@
-"Hello Word" 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/estilos.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <style>
+        #contenedorImagen {
+            text-align: center;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeSwitch = document.getElementById('themeSwitch');
+
+            // Cargar el tema guardado en el localStorage al cargar la página
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                themeSwitch.checked = false;
+                document.body.classList.add('light');
+            } else {
+                themeSwitch.checked = true;
+                document.body.classList.remove('light');
+            }
+
+            themeSwitch.addEventListener('change', function () {
+                if (this.checked) {
+                    document.body.classList.remove('light');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.body.classList.add('light');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        });
+
+    </script>
+
+
+
+</head>
+
+
+<body>
+    <!--HEADER-->
+    <header class="header sticky sticky--top js-header">
+        <!--<div>
+            <label class="day-night">
+                <input type="checkbox" id="themeSwitch" />
+                <div></div>
+            </label>-->
+        </div>
+
+    </header>
+
+
+    <main>
+        <code>
+        <div id="mainContainer">
+
+            
+        <div class="divContainer">
+            <div>
+            <h3 id="info"><span style="color: #b4ba71;">#infoAboutMe</span><span style="color: #ffd70a;">{</span></h3>
+            <p id="name"><span style="color: #9cdcf1;">name</span>: Roberto;<br>
+            <span style="color: #9cdcf1;">firsName</span>:Cerezo;<br>
+            <span style="color: #9cdcf1;">secondName</span>: Moreno;<br>
+            <span style="color: #9cdcf1;">job</span>: Tecnico en desarrollo de aplicaciones web y multiplataforma;<br>
+            <span style="color: #9cdcf1;">description</span>: Recien titulado, con ganas de aprender y enfrentar nuevos retos.<br>
+            Definiria mi relacion con la programación como una relacion de amor/odio, odio que me de quebraderos de cabeza pero amo resolverlos;<br>
+            </p>
+            <h3 id="info"><span style="color: #ffd70a;">}</span></h3>
+            </div>
+
+        </div>
+
+
+        <div class="divContainer">
+            <div>
+            <h3 id="exp"><<span style="color: #569cd6;">div</span> <span style="color: #8cdcdd;">id</span>=<span style="color: #ce834a;">"experienciaObtenida"</span>></h3>
+            <p id="experienceText" class="firstTab">&lt;<span style="color: #569cd6;">h3</span>&gt; Técnico en desarrollo de aplicaciones web &lt;/<span style="color: #569cd6;">h3</span>&gt;<br>
+                &lt;<span style="color: #569cd6;">h5</span>&gt; Fontventa S.L. | Marzo 2023 - Junio 2023 &lt;/<span style="color: #569cd6;">h5</span>&gt;<br><br>
+                &lt;<span style="color: #569cd6;">li</span> <span style="color: #8cdcdd;">id</span>=<span style="color: #ce834a;">"listActivities"</span>&gt;<br>
+            </p>
+            <p class="secondTab">
+                &lt;<span style="color: #569cd6;">ul</span> <span style="color: #8cdcdd;">id</span>=<span style="color: #ce834a;">"firstActivity"</span>&gt; Formación en BBDD y lenguajes de programacion<br>
+                JavaScript y Visual Basic .NET. &lt;/<span style="color: #569cd6;">ul</span>&gt; <br>
+                &lt;<span style="color: #569cd6;">ul</span> <span style="color: #8cdcdd;">id</span>=<span style="color: #ce834a;">"secondActivity"</span>&gt; Desarrollo de un proyecto web utilizando Visual Basic .NET. &lt;/<span style="color: #569cd6;">ul</span>&gt; <br>
+                
+            </p>
+            <p class="firstTab">
+                &lt;/<span style="color: #569cd6;">li</span>&gt;
+            </p>
+
+            <p id="experienceText" class="firstTab">&lt;<span style="color: #569cd6;">h3</span>&gt; Técnico en desarrollo de aplicaciones multiplataforma &lt;/<span style="color: #569cd6;">h3</span>&gt;<br>
+                &lt;<span style="color: #569cd6;">h5</span>&gt;  BIBLIOETECA TECHNOLOGIES | Abril 2021 - Junio 2021 &lt;/<span style="color: #569cd6;">h5</span>&gt;<br><br>
+                &lt;<span style="color: #569cd6;">li</span> <span style="color: #8cdcdd;">id</span>=<span style="color: #ce834a;">"listActivities"</span>&gt;<br>
+            </p>
+            <p class="secondTab">
+                &lt;<span style="color: #569cd6;">ul</span> <span style="color: #8cdcdd;">id</span>=<span style="color: #ce834a;">"firstActivity"</span>&gt; Desarrollo de un proyecto web utilizando PHP. &lt;/<span style="color: #569cd6;">ul</span>&gt; <br>
+                &lt;<span style="color: #569cd6;">ul</span> <span style="color: #8cdcdd;">id</span>=<span style="color: #ce834a;">"secondActivity"</span>&gt; Desarrollo de una aplicación para móvil mediante <br>
+                uso del SDK Flutter. &lt;/<span style="color: #569cd6;">ul</span>&gt; <br>
+                
+            </p>
+            <p class="firstTab">
+                &lt;/<span style="color: #569cd6;">li</span>&gt;
+            </p>
+            
+            <h3>&lt;/<span style="color: #569cd6;">div</span>&gt;</h3>
+            </div>
+        </div>
+
+        <div class="divContainer">
+            <div>
+            <h3 id="exp"><span style="color: #569cd6;">public static void</span> <span style="color: #d8dcaa;">Skills</span>()<span style="color: #ffd70a;">{</span></h3>
+
+                <h3 class="firstTab">
+                    <span style="color: #569cd6;">var</span> java =  <span style="color: #569cd6;">hardSkills[0]</span>;
+                </h3>
+
+                <h3 class="firstTab">
+                    <span style="color: #569cd6;">var</span> html =  <span style="color: #569cd6;">hardSkills[1]</span>;
+                </h3>
+
+                <h3 class="firstTab">
+                    <span style="color: #569cd6;">var</span> css =  <span style="color: #569cd6;">hardSkills[2]</span>;
+                </h3>
+
+                <h3 class="firstTab">
+                    <span style="color: #569cd6;">var</span> javascript =  <span style="color: #569cd6;">hardSkills[3]</span>;
+                </h3>
+
+                <h3 class="firstTab">
+                    <span style="color: #569cd6;">var</span> trabajoEnEquipo =  <span style="color: #569cd6;">softSkills[0]</span>;
+                </h3>
+
+                <h3 class="firstTab">
+                    <span style="color: #569cd6;">var</span> proActividad =  <span style="color: #569cd6;">softSkills[1]</span>;
+                </h3>
+
+                <h3 class="firstTab">
+                    <span style="color: #569cd6;">var</span> ambicion =  <span style="color: #569cd6;">softSkills[2]</span>;
+                </h3>
+
+            <h3 id="info"><span style="color: #ffd70a;">}</span></h3>
+            </div>
+        </div>
+
+        <div class="divContainer">
+            <div>
+            <h3 id="exp"><span style="color: #569cd6;">public static void</span> <span style="color: #d8dcaa;">RedesSocialesyContacto</span>()<span style="color: #ffd70a;">{</span></h3>
+
+                <h3 class="firstTab">
+                    <span style="color: #569cd6;">var</span> github =  <a href="https://github.com/robertocerezo7" style="color: #4ebe92;" target="_blank">robertocerezo7</a>
+                </h3>
+
+                <h3 class="firstTab">
+                    <span style="color: #569cd6;">var</span> linkedin =  <a href="https://www.linkedin.com/in/robertocerezo7" style="color: #4ebe92;" target="_blank">Roberto Cerezo Moreno</a>
+                </h3>
+
+                <h3 class="firstTab">
+                    <span style="color: #569cd6;">var</span> correoElectronico =  <a href="mailto:robertocerezo7@hotmail.com" style="color: #4ebe92;" target="_blank">robertocerezo7@hotmail.com</a>
+                </h3>
+
+            <h3 id="info"><span style="color: #ffd70a;">}</span></h3>
+        </div>
+        </div>
+
+        <div class="divContainer">
+
+            <h3 id="exp"><span style="color: #569cd6;">public static void</span> <span style="color: #d8dcaa;">CV</span>()<span style="color: #ffd70a;">{</span></h3>
+
+                <h3 class="firstTab">
+                    <span style="color: #569cd6;">var</span> verCv =  <a href="files/RobertoCerezoMorenoCV.pdf" style="color: #4ebe92;" target="_blank">CV.Show();</a>
+                </h3>
+
+                <h3 class="firstTab">
+                    <span style="color: #569cd6;">var</span> descargarCv =  <a href="files/RobertoCerezoMorenoCV.pdf" style="color: #4ebe92;" download>CV.Download();</a>
+                </h3>
+
+            <h3 id="info"><span style="color: #ffd70a;">}</span></h3>
+
+        </div>
+
+        <div class="divContainer">
+            <div>
+            <h3 id="exp"><span style="color: #569cd6;">public static void</span> <span style="color: #d8dcaa;">CargarResultado</span>()<span style="color: #ffd70a;">{</span></h3>
+
+                <button id="buttonCharge" onclick="location.href='https://www.google.com/'">Cargar</button>
+
+            <h3 id="info"><span style="color: #ffd70a;">}</span></h3>
+        </div>
+        </div>
+
+        
+
+        </div>
+        </code>
+    </main>
+
+
+    <br><br>
+    <footer class="footer">
+        <div>
+            <code>
+                <span class="">Portafolio creado por <a href="https://github.com/robertocerezo7" style="color: #9cdcf1;" target="_blank">robertocerezo7</a></span>
+            </code>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
